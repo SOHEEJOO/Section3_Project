@@ -1,0 +1,9 @@
+{% if User_list %}
+    <ul>
+    {% for User in User_list %}
+        <li><a href="/detail/{{User.id}}/">{{User.username}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>사용자를 찾지못했습니다.</p>
+{% endif %}
