@@ -1,10 +1,13 @@
 <html>
 <body bgcolor = #9d3bc4>
         <center>
-            <h1>영화수익 예측하기!</h1>
-            <form method='POST', action = predict>
-                <b>budget(Ex.1000000) : <input type="number", name='budget', placeholder="enter 1"><br><br>
-                    runtime(분) : <input type="number", name='runtime', placeholder="enter 2"><br><br></b>
+            <h1>안녕하세요ㅎㅎ 영화 수익 예측하기!</h1>
+            <form action = "http://127.0.0.1:5000/predict", method="POST">
+                <b>예산 : <input type="number", name='budget', placeholder="숫자를 입력하세요"><br><br>
+                    runtime : <input type="number", name='runtime', placeholder="숫자를 입력하세요(분)"><br><br>
+                    평점 : <input type="number", name='vote_average', placeholder="10점 만점"><br><br>
+                    평가인원 수 : <input type="number", name='vote_count', placeholder="숫자를 입력하세요"><br><br>
+                </b>
                     <input type="submit", value ="predict!">
             </form>
         </center>

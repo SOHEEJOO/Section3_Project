@@ -7,8 +7,10 @@ class User(db.Model):
     number = db.Column(db.Integer, nullable=False)
     birth = db.Column(db.DateTime(), nullable=False)
 
-class Answer(db.Model):
-    __tablename__='Answer'
+class Movie(db.Model):
+    __tablename__='Movie'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('User.id', ondelete='CASCADE'))
-    answer = db.Column(db.Text(), nullable=False)
+    budget = db.Column(db.Integer, nullable=False)
+    runtime = db.Column(db.Integer, nullable=False)
+    revenue = db.Column(db.Integer, nullable=False)

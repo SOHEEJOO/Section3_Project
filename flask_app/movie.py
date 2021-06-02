@@ -10,8 +10,9 @@ import joblib
 client = EmbeddingClient(host='13.125.113.215', port=8989)
 
 data = pd.read_csv('movies_metadata.csv', sep=',')
-data = data.dropna()
 data = data.drop(['id'], axis=1)
+data = data.dropna()
+
 print(data)
 
 model=LinearRegression()
@@ -21,6 +22,7 @@ target ='revenue'
 y = data[target]
 x = data.drop(columns=target)
 
+print(x)
 model.fit(x,y)
 
 joblib.dump(model, "model.pkl")

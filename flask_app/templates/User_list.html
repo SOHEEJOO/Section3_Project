@@ -1,9 +1,14 @@
-{% if User_list %}
-    <ul>
-    {% for User in User_list %}
-        <li><a href="/detail/{{User.id}}/">{{User.username}}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>사용자를 찾지못했습니다.</p>
-{% endif %}
+<html>
+<body bgcolor = #9d3bc4>
+        <center>
+            <h1>안녕하세요~ 사용자 정보를 입력해주세요!</h1>
+            <form action = "http://127.0.0.1:5000/value", method="POST">
+                <b>id : <input type="number", name='userid', placeholder="user_id입력하세요"><br><br>
+                    이름 : <input type="text", name='username', placeholder="이름을 입력하세요"><br><br>
+                    전화번호 : <input type="number", name='number', placeholder="ex)01022223333"><br><br>
+                    생일 : <input type="number", name='birth', placeholder="ex)19950101"><br><br></b>
+                    <input type="submit", value ="등록"><br><br>
+            </form>
+        </center>
+</body>
+</html>
